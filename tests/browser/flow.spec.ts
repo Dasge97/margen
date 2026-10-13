@@ -93,9 +93,9 @@ test("start, reserve, spend, transfer, import, simulate and reload", async ({
     "200,00",
   );
   await page.getByRole("button", { name: "Mi mapa", exact: true }).click();
-  await expect(page.locator(".summary")).toContainText("1.437,50");
+  await expect(page.locator(".summary")).toContainText("1437,50");
   await page.reload();
-  await expect(page.locator(".summary")).toContainText("1.437,50");
+  await expect(page.locator(".summary")).toContainText("1437,50");
   await expect(page.locator(".hero-number")).toContainText("350,00");
   expect(errors).toEqual([]);
   expect(

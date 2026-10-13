@@ -1334,7 +1334,7 @@ async function logout() {
             maxlength="80"
             placeholder="Mi banco, cartera…" /></label
         ><label
-          >Tipo<select v-model="form.kind">
+          >Tipo<select v-model="form.kind" aria-label="Tipo">
             <option value="bank">Cuenta bancaria</option>
             <option value="cash">Efectivo</option>
           </select></label
@@ -1423,7 +1423,7 @@ async function logout() {
       >
       <template v-if="modal === 'transaction'"
         ><label
-          >Tipo<select v-model="form.kind">
+          >Tipo<select v-model="form.kind" aria-label="Tipo">
             <option value="expense">Gasto</option>
             <option value="income">Ingreso o devolución</option>
             <option value="transfer">Traspaso entre mis cuentas</option>
