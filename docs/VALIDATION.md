@@ -6,11 +6,13 @@
 - API sobre PostgreSQL WASM (PGlite): registro, cookies, sesión, aislamiento de dos usuarios, lectura con propietario manipulado, escritura concurrente rechazada, origen no autorizado, logout, borrado de usuario y recuperación de contraseña de un solo uso.
 - `npm run build`: compilación del frontend Vue y del servidor TypeScript completada.
 
-## Preparado, pendiente de ejecutar con navegador disponible
+## Navegador y revisión visual
 
-- Playwright en escritorio y móvil: registro, cuenta, partidas, reserva, gasto, objetivo, traspaso a efectivo, importación CSV, simulación descartada, persistencia tras recarga y ancho de pantalla sin desbordamiento.
-- Se intentó instalar Chromium, pero la descarga devolvió un archivo inválido. La ejecución local de Playwright no pudo iniciar el navegador; no constituye una prueba funcional fallida de la aplicación. No se ha inspeccionado visualmente la interfaz renderizada en este entorno.
-- CI incluye instalación de Chromium y ambas pruebas; sus resultados deben comprobarse en GitHub Actions.
+- **2 recorridos Playwright aprobados**, Chromium en escritorio y emulación móvil: registro, cuenta, partidas, reserva, gasto, objetivo, traspaso a efectivo, importación CSV, simulación descartada, persistencia tras recarga y ancho de pantalla sin desbordamiento.
+- GitHub Actions aprobó las 12 pruebas de dominio/API, la compilación y ambos recorridos de navegador sobre el commit `77d96e9f9a0371bf50f069bc2d662ed61327b49c`.
+- [Ejecución comprobada](https://github.com/Dasge97/margen/actions/runs/38418511822).
+- Capturas del mapa revisadas en escritorio y móvil: composición, legibilidad, tarjetas, panel de partida y navegación. CI conserva capturas como artefactos.
+- La descarga local de Chromium falló; las pruebas de navegador se ejecutaron correctamente en GitHub Actions.
 
 ## No verificado aquí
 
@@ -18,4 +20,4 @@
 - Entrega SMTP real, proxy HTTPS, certificados y recuperación de backups de una instalación.
 - Carga alta, pentest, auditoría completa de accesibilidad y operación de un servicio público.
 
-El frontend compilado no demuestra por sí solo corrección visual. La v0.1 se entrega con estos límites explícitos.
+La v0.1 se entrega con estos límites explícitos.
